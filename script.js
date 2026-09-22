@@ -80,6 +80,15 @@ const MOVIES_DATA = [
         trailer: "https://youtube.com",
         desc: "Emekli bir tetikçi olan John Wick, evine giren gangsterlerin her şeyini elinden alması üzerine intikam yemini ederek yeraltı dünyasına geri döner."
     }
+     {
+        id: 1,
+        title: "Interstellar",
+        genre: "Bilim Kurgu",
+        year: "2014",
+        rating: "8.7",
+        image: "https://unsplash.com",
+        trailer: "https://youtube.com",
+        desc: "İnsanlığın geleceği tehlikeye girdiğinde, bir grup astronot yaşanabilir yeni bir gezegen bulmak için solucan deliğinden geçerek uzayda sınırları zorlar."
 ];
 
 const movieGrid = document.getElementById('movie-grid');
