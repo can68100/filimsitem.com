@@ -71,6 +71,16 @@ const MOVIES_DATA = [
         trailer: "<iframe width="560" height="315" src="https://www.youtube.com/embed/BPXtVB2Qp-4?si=n6IKOnW_DYcUY3Mx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>", // Buraya embed linkini koyun
         desc: "Recep İvedik, Konya'daki kuru fasulye festivaline gitmek ister. Ancak acentenin hatası yüzünden arkadaşı Nurullah ile birlikte yanlışlıkla Kenya'ya gider. Afrika bozkırlarında mahsur kalan ikili, iki düşman yerli kabilenin arasında komik ve vahşi bir maceraya atılır."
     },
+    {
+        id: 7, 
+        title: "Avatar: Suyun Yolu",
+        genre: "Bilim Kurgu", 
+        year: "2022",
+        rating: "7.6",
+        image: "https://unsplash.com", 
+        trailer: "https://youtube.com", 
+        desc: "İlk filmdeki olayların üzerinden on yıldan fazla bir süre geçtikten sonra, Sully ailesinin hikayesini ve hayatta kalma mücadelelerini anlatıyor."
+    },
 
 const movieGrid = document.getElementById('movie-grid');
 const searchInput = document.getElementById('search-input');
