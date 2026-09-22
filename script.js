@@ -7,7 +7,7 @@ const MOVIES_DATA = [
         year: "2014",
         rating: "8.7",
         image: "https://unsplash.com",
-        trailer: "https://youtube.com", // Resmi YouTube Embed Linki
+        trailer: "https://youtube.com",
         desc: "İnsanlığın geleceği tehlikeye girdiğinde, bir grup astronot yaşanabilir yeni bir gezegen bulmak için solucan deliğinden geçerek uzayda sınırları zorlar."
     },
     {
@@ -59,28 +59,28 @@ const MOVIES_DATA = [
         image: "https://unsplash.com",
         trailer: "https://youtube.com",
         desc: "New York'taki güçlü bir İtalyan-Amerikan mafya ailesinin reisi olan Don Vito Corleone'nin imparatorluğunu ve yönetimi devrettiği oğlu Michael'ı konu alır."
-    }
-];
-    {
-        id: 7, // Her film için benzersiz bir numara verin
-        title: "recep ivedik",
-        genre: "komedi", // 
-        year: "2019",
-        rating: "8.5",
-        image: "https://www.google.com/imgres?q=recep%20ivedik%206&imgurl=https%3A%2F%2Ffoto.haberler.com%2Fhaber%2F2018%2F12%2F08%2Frecep-ivedik-6-filmi-11516949_amp.jpg&imgrefurl=https%3A%2F%2Fwww.haberler.com%2Frecep-ivedik-6-filmi-11516949-haberi%2F&docid=XKqw0LG0ab81cM&tbnid=MXa9vlgaqQx83M&vet=12ahUKEwiJg8qLqoKXAxUKgv0HHS3BJ_wQnPAOegQIOxAA..i&w=1200&h=1717&hcb=2&ved=2ahUKEwiJg8qLqoKXAxUKgv0HHS3BJ_wQnPAOegQIOxAA", // Film kapak resmi linki
-        trailer: "<iframe width="560" height="315" src="https://www.youtube.com/embed/BPXtVB2Qp-4?si=n6IKOnW_DYcUY3Mx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>", // Buraya embed linkini koyun
-        desc: "Recep İvedik, Konya'daki kuru fasulye festivaline gitmek ister. Ancak acentenin hatası yüzünden arkadaşı Nurullah ile birlikte yanlışlıkla Kenya'ya gider. Afrika bozkırlarında mahsur kalan ikili, iki düşman yerli kabilenin arasında komik ve vahşi bir maceraya atılır."
     },
     {
-        id: 7, 
-        title: "Avatar: Suyun Yolu",
-        genre: "Bilim Kurgu", 
+        id: 7,
+        title: "Avatar: Water",
+        genre: "Bilim Kurgu",
         year: "2022",
         rating: "7.6",
-        image: "https://unsplash.com", 
-        trailer: "https://youtube.com", 
+        image: "https://unsplash.com",
+        trailer: "https://youtube.com",
         desc: "İlk filmdeki olayların üzerinden on yıldan fazla bir süre geçtikten sonra, Sully ailesinin hikayesini ve hayatta kalma mücadelelerini anlatıyor."
     },
+    {
+        id: 8,
+        title: "John Wick",
+        genre: "Aksiyon",
+        year: "2014",
+        rating: "7.4",
+        image: "https://unsplash.com",
+        trailer: "https://youtube.com",
+        desc: "Emekli bir tetikçi olan John Wick, evine giren gangsterlerin her şeyini elinden alması üzerine intikam yemini ederek yeraltı dünyasına geri döner."
+    }
+];
 
 const movieGrid = document.getElementById('movie-grid');
 const searchInput = document.getElementById('search-input');
@@ -118,7 +118,6 @@ function displayMovies(movies) {
     });
 }
 
-// Detay Pop-Up ve Video Oynatıcıyı Tetikleme
 function openMovieDetail(movie) {
     modalBody.innerHTML = `
         <div class="video-container">
@@ -137,12 +136,10 @@ function openMovieDetail(movie) {
     modal.style.display = "flex";
 }
 
-// Hero Bölümündeki Buton İçin İlk Filmin Fragmanını Açma Fonksiyonu
 function openHeroTrailer() {
     openMovieDetail(MOVIES_DATA[0]);
 }
 
-// Kategori Filtreleme
 function filterGenre(genreName) {
     const links = document.querySelectorAll('.nav-links a');
     links.forEach(link => link.classList.remove('active'));
@@ -158,7 +155,6 @@ function filterGenre(genreName) {
     }
 }
 
-// Arama Motoru
 function handleSearch() {
     const query = searchInput.value.toLowerCase().trim();
     if(query !== "") {
@@ -176,11 +172,10 @@ function handleSearch() {
 searchBtn.addEventListener('click', handleSearch);
 searchInput.addEventListener('keyup', (e) => { if(e.key === 'Enter') handleSearch(); });
 
-// Modalı Kapatma ve Videoyu Kapatma/Durdurma Kontrolü
 function stopAndCloseModal() {
     const iframe = document.getElementById('trailer-video');
     if (iframe) {
-        iframe.setAttribute('src', ''); // Videoyu tamamen keser ve sesi durdurur
+        iframe.setAttribute('src', '');
     }
     modal.style.display = "none";
 }
