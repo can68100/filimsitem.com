@@ -81,7 +81,7 @@ const MOVIES_DATA = [
         desc: "Emekli bir tetikçi olan John Wick, evine giren gangsterlerin her şeyini elinden alması üzerine intikam yemini ederek yeraltı dünyasına geri döner."
     }
      {
-        id: 1,
+        id: 9,
         title: "Interstellar",
         genre: "Bilim Kurgu",
         year: "2014",
