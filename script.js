@@ -61,6 +61,16 @@ const MOVIES_DATA = [
         desc: "New York'taki güçlü bir İtalyan-Amerikan mafya ailesinin reisi olan Don Vito Corleone'nin imparatorluğunu ve yönetimi devrettiği oğlu Michael'ı konu alır."
     }
 ];
+    {
+        id: 7, // Her film için benzersiz bir numara verin
+        title: "recep ivedik",
+        genre: "komedi", // 
+        year: "2019",
+        rating: "8.5",
+        image: "https://www.google.com/imgres?q=recep%20ivedik%206&imgurl=https%3A%2F%2Ffoto.haberler.com%2Fhaber%2F2018%2F12%2F08%2Frecep-ivedik-6-filmi-11516949_amp.jpg&imgrefurl=https%3A%2F%2Fwww.haberler.com%2Frecep-ivedik-6-filmi-11516949-haberi%2F&docid=XKqw0LG0ab81cM&tbnid=MXa9vlgaqQx83M&vet=12ahUKEwiJg8qLqoKXAxUKgv0HHS3BJ_wQnPAOegQIOxAA..i&w=1200&h=1717&hcb=2&ved=2ahUKEwiJg8qLqoKXAxUKgv0HHS3BJ_wQnPAOegQIOxAA", // Film kapak resmi linki
+        trailer: "<iframe width="560" height="315" src="https://www.youtube.com/embed/BPXtVB2Qp-4?si=n6IKOnW_DYcUY3Mx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>", // Buraya embed linkini koyun
+        desc: "Recep İvedik, Konya'daki kuru fasulye festivaline gitmek ister. Ancak acentenin hatası yüzünden arkadaşı Nurullah ile birlikte yanlışlıkla Kenya'ya gider. Afrika bozkırlarında mahsur kalan ikili, iki düşman yerli kabilenin arasında komik ve vahşi bir maceraya atılır."
+    },
 
 const movieGrid = document.getElementById('movie-grid');
 const searchInput = document.getElementById('search-input');
